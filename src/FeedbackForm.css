@@ -1,0 +1,134 @@
+.feedback-form {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background:rgb(115, 255, 0); /* Warm beige background */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .feedback-form h2 {
+    text-align: center;
+    color: #444;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .feedback-form h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: black;
+  }
+  
+  .feedback-form p {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: black;
+  }
+  
+  .feedback-form textarea,
+  .feedback-form input[type="text"],
+  .feedback-form input[type="email"],
+  .feedback-form input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+  }
+  
+  .feedback-form textarea {
+    resize: none;
+    height: 80px;
+  }
+  
+  .feedback-form input:focus,
+  .feedback-form textarea:focus {
+    border-color: #ff8c42;
+    box-shadow: 0 0 5px rgba(255, 140, 66, 0.5);
+  }
+  
+  .star-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .star {
+    font-size: 28px;
+    cursor: pointer;
+    color: #ddd;
+    transition: color 0.3s, transform 0.2s;
+  }
+  
+  .star.filled {
+    color: #f4a261;
+    transform: scale(1.2);
+  }
+  
+  .star:hover {
+    color: #f4a261;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #e76f51;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
+    margin-top: 20px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #d45d42;
+    transform: scale(1.05);
+  }
+  
+  button[type="submit"]:active {
+    background-color: #c14d39;
+  }
+  
+  .feedback-form .yes-no-option {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .feedback-form .yes-no-option label {
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .feedback-form .yes-no-option input {
+    margin-right: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .feedback-form {
+      padding: 20px;
+    }
+  
+    .feedback-form h2 {
+      font-size: 1.8rem;
+    }
+  
+    .feedback-form h3 {
+      font-size: 1.3rem;
+    }
+  
+    button[type="submit"] {
+      font-size: 1rem;
+    }
+  }
