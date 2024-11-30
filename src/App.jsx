@@ -7,6 +7,7 @@ import { CartProvider, useCart } from "./CartContext";
 import FeedbackForm from "./FeedbackForm";
 import "./index.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const Popup = () => {
   const { popupMessage } = useCart();
@@ -33,6 +34,7 @@ const App = () => {
             <Route path="/feedback-form" element={<FeedbackForm />} />
           </Routes>
         </div>
+        <Footer/>
       </Router>
     </CartProvider>
   );
