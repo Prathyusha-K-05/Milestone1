@@ -8,6 +8,7 @@ import FeedbackForm from "./FeedbackForm";
 import "./index.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Home from "./components/Home";
 
 const Popup = () => {
   const { popupMessage } = useCart();
@@ -29,7 +30,7 @@ const App = () => {
           </nav>
           <Popup />
           <Routes>
-            <Route path="/" element={<MenuList />} />
+            <Route path="/" element={<Home />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/feedback-form" element={<FeedbackForm />} />
           </Routes>

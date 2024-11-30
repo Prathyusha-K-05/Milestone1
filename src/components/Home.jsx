@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./HeroSection.css";
+import "./Home.css";
 
-const HeroSection = () => {
+const Home = () => {
   return (
     <div className="hero">
       <div className="hero-content">
@@ -16,4 +16,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default Home;
