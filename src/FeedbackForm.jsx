@@ -1,6 +1,7 @@
 // FeedbackForm.js
 import React, { useState } from 'react';
 import './FeedbackForm.css';
+import { Link } from 'react-router-dom';
 
 const FeedbackForm = () => {
   const [formData, setFormData] = useState({
@@ -150,8 +151,8 @@ const FeedbackForm = () => {
       <h3>9. Open Feedback</h3>
       <p>Do you have any additional comments or suggestions to help us improve?</p>
       <textarea name="additionalComments" placeholder="Your feedback" value={formData.additionalComments} onChange={handleInputChange} />
-
-      <button type="submit">Submit Feedback</button>
+       <Link to="/Home"><button type="submit">Submit Feedback</button></Link>
+      
     </form>
   );
 };

@@ -1,10 +1,24 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./Navbar.css"; // Import the CSS file for styling
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";  
+import "./Navbar.css"; 
 
 const Navbar = () => {
+  const location = useLocation();
+  const [isFixed, setIsFixed] = useState(true);
+
+  useEffect(() => {
+   
+    
+    if (location.pathname === '/') {
+      setIsFixed(false); 
+      
+    } else {
+      setIsFixed(true); 
+    }
+  }, [location.pathname]);
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isFixed ? 'fixed-navbar' : ''}`}>
       <div className="navbar-logo">
         <Link to="/">🍴 Foodie</Link>
       </div>

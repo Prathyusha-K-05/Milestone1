@@ -1,6 +1,6 @@
 // src/App.js
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MenuList from "./components/MenuList";
 import Cart from "./components/Cart";
 import { CartProvider, useCart } from "./CartContext";
@@ -41,7 +41,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<LoginPage />} />
             <Route path="/Home" element={<Homee/>}/>
-            
+            <Route path="/menu" element={<MenuList/>}/>
             <Route path="/cart" element={<Cart />} />
             <Route path="/feedback-form" element={<FeedbackForm />} />
             <Route path="/signup" element={<SignUpPage/>}/>
