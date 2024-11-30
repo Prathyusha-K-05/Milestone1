@@ -1,0 +1,43 @@
+.about-us {
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  .about-us-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .about-us-header h1 {
+    font-size: 2.5rem;
+    color: #ff6f61; /* Same as navbar color */
+  }
+  
+  .about-us-header p {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .about-us-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .about-us-section {
+    background-color: #ffe6e1;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .about-us-section h2 {
+    font-size: 1.8rem;
+    color: #ff6f61;
+    margin-bottom: 1rem;
+  }
+  
+  .about-us-section p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
