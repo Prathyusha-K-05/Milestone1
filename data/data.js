@@ -1,6 +1,4 @@
-import React from 'react'
-
-export const data=[
+const data=[
     {
         title:'Tandoori Paneer Tikka',
         img:'',
@@ -35,3 +33,4 @@ export const data=[
     },
 ] 
 
+export default data;
