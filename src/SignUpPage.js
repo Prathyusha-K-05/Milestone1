@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './style.css';
 
 function SignUpPage() {
@@ -31,7 +32,7 @@ function SignUpPage() {
 
                 <div className="alternative-login">
                     <p>Or</p>
-                    <p>Already have an account? <a href="login.html">Login here</a></p>
+                    <p>Already have an account? <Link to="/">Login here</Link></p>
                 </div>
             </div>
         </div>
@@ -39,3 +40,4 @@ function SignUpPage() {
 }
 
 export default SignUpPage;
+

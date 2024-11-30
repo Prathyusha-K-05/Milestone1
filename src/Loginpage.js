@@ -1,6 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './style.css';
-
 
 function LoginPage() {
     return (
@@ -18,14 +18,14 @@ function LoginPage() {
                         <button type="submit">Login</button>
                     </form>
                 </div>
-                
+
                 <div className="alternative-login">
                     <p>Or</p>
                     <button className="google-login">
-                        <img src="https://cdn-icons-png.flaticon.com/128/300/300221.png" alt="Google Icon" className="img2" /> Continue With Google
+                        <img src="https://cdn-icons-png.flaticon.com/128/300/300221.png" alt="Google Icon" className="img2" />
+                        Continue With Google
                     </button>
-                    <p>New user? <a href="sign up.html">Sign up here</a></p>
-                 
+                    <p>New user? <Link to="/signup">Sign up here</Link></p>
                 </div>
             </div>
         </div>
