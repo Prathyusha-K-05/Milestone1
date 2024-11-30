@@ -9,6 +9,7 @@ import "./index.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
+import PopularDishes from "./components/PopularDishes";
 
 const Popup = () => {
   const { popupMessage } = useCart();
@@ -18,6 +19,13 @@ const Popup = () => {
   return <div className="popup">{popupMessage}</div>;
 };
 
+
+const Homee = () => (
+  <div>
+    <Home />
+    <PopularDishes />
+  </div>
+);
 const App = () => {
   return (
     <CartProvider>
@@ -25,12 +33,12 @@ const App = () => {
       <Router>
         <Navbar/>
         <div>
-          <nav>
+          {/* <nav>
             <Link to="/">Menu</Link> | <Link to="/cart">Cart</Link>
-          </nav>
+          </nav> */}
           <Popup />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Homee />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/feedback-form" element={<FeedbackForm />} />
           </Routes>
