@@ -12,6 +12,7 @@ import Home from "./components/Home";
 import PopularDishes from "./components/PopularDishes";
 import LoginPage from "./Loginpage";
 import SignUpPage from "./SignUpPage";
+import AboutUs from "./components/AboutUs";
 
 const Popup = () => {
   const { popupMessage } = useCart();
@@ -44,6 +45,8 @@ const App = () => {
             <Route path="/Home" element={<Homee/>}/>
             <Route path="/menu" element={<MenuList/>}/>
             <Route path="/cart" element={<Cart />} />
+            <Route path="/about" element={<AboutUs/>}/>
+            
             <Route path="/feedback-form" element={<FeedbackForm />} />
             <Route path="/signup" element={<SignUpPage/>}/>
           </Routes>
