@@ -10,7 +10,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import PopularDishes from "./components/PopularDishes";
-
+import LoginPage from "./Loginpage";
+import SignUpPage from "./SignUpPage";
 const Popup = () => {
   const { popupMessage } = useCart();
 
@@ -38,9 +39,12 @@ const App = () => {
           </nav> */}
           <Popup />
           <Routes>
-            <Route path="/" element={<Homee />} />
+            <Route path="/" element={<LoginPage />} />
+            <Route path="/Home" element={<Homee/>}/>
+            
             <Route path="/cart" element={<Cart />} />
             <Route path="/feedback-form" element={<FeedbackForm />} />
+            <Route path="/signup" element={<SignUpPage/>}/>
           </Routes>
         </div>
         <Footer/>

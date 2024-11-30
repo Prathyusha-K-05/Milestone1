@@ -14,8 +14,8 @@ function LoginPage() {
 
                         <label htmlFor="password" className="title">Password</label>
                         <input type="password" className="pswrd all" placeholder="Enter your password" />
-
-                        <button type="submit">Login</button>
+                        <Link to="/Home"><button type="submit">Login</button></Link>
+                        
                     </form>
                 </div>
 
