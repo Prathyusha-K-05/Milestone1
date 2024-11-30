@@ -4,8 +4,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import MenuList from "./components/MenuList";
 import Cart from "./components/Cart";
 import { CartProvider, useCart } from "./CartContext";
-// import FeedbackForm from "./components/FeedbackForm";
+import FeedbackForm from "./FeedbackForm";
 import "./index.css";
+import Navbar from "./components/Navbar";
 
 const Popup = () => {
   const { popupMessage } = useCart();
@@ -18,7 +19,9 @@ const Popup = () => {
 const App = () => {
   return (
     <CartProvider>
+      {/* <Navbar/> */}
       <Router>
+        <Navbar/>
         <div>
           <nav>
             <Link to="/">Menu</Link> | <Link to="/cart">Cart</Link>
@@ -27,7 +30,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<MenuList />} />
             <Route path="/cart" element={<Cart />} />
-            {/* <Route path="/feedback-form" element={<FeedbackForm />} /> */}
+            <Route path="/feedback-form" element={<FeedbackForm />} />
           </Routes>
         </div>
       </Router>
