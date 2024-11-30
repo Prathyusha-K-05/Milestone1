@@ -12,6 +12,7 @@ import Home from "./components/Home";
 import PopularDishes from "./components/PopularDishes";
 import LoginPage from "./Loginpage";
 import SignUpPage from "./SignUpPage";
+
 const Popup = () => {
   const { popupMessage } = useCart();
 

@@ -3,9 +3,9 @@ import DishCard from "./DishCard";
 import "./PopularDishes.css";
 
 const dishes = [
-  { id: 1, name: "Margherita Pizza", image: "/images/pizza.jpg", price: "120" },
-  { id: 2, name: "Cheeseburger", image: "/images/burger.jpg", price: "100" },
-  { id: 3, name: "Sushi Platter", image: "/images/sushi.jpg", price: "200" },
+  { id: 1, name: "Margherita Pizza", image: "/pizza.jpg", price: "120" },
+  { id: 2, name: "Cheeseburger", image: "/Burger.jpg", price: "100" },
+  { id: 3, name: "Sushi Platter", image: "/Sushi_platter.jpg", price: "200" },
 ];
 
 const PopularDishes = () => {
