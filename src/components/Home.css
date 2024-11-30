@@ -1,0 +1,45 @@
+/* HeroSection Styles */
+.hero {
+    background-image: url("Food1.jpg"); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .hero-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Slight overlay for readability */
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .menu-button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .menu-button:hover {
+    background-color: #ff4a3d;
+  }
+  
