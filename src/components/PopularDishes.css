@@ -1,0 +1,58 @@
+/* Popular Dishes Styles */
+.popular-dishes {
+    margin-top: -100px; /* To overlap with Hero section */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    padding: 2rem;
+    text-align: center;
+    border-radius: 16px 16px 0 0;
+  }
+  
+  .popular-dishes h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .dishes-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .dish-card {
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .dish-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .dish-card h3 {
+    font-size: 1.2rem;
+    margin: 1rem 0 0.5rem;
+  }
+  
+  .dish-card p {
+    margin: 0.5rem 0;
+    font-weight: bold;
+  }
+  
+  .dish-card button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .dish-card button:hover {
+    background-color: #ff4a3d;
+  }
+  
