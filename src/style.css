@@ -76,6 +76,14 @@ button {
     margin-top: 10px;
 }
 
+.category-buttons button{
+    padding-top: 10;
+    background-color:rgb(37, 60, 61);
+    color:aliceblue;
+    border-color:#33a5ec;
+    margin: 5px;
+}
+
 button:hover {
     background-color: #45a049;
 }

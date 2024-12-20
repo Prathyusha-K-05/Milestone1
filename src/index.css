@@ -23,7 +23,8 @@ h1 {
 
 /* Container for the menu */
 .menu-container {
-  padding: 16px;
+  padding:20px;
+  padding-top:60px;
 }
 
 /* Buttons for categories */
@@ -42,6 +43,7 @@ h1 {
   background-color: #f9f9f9;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin:5px;
 }
 
 .category-buttons button.active {
@@ -51,8 +53,36 @@ h1 {
 }
 
 .category-buttons button:hover {
-  background-color: #2980b9;
+  background-color: #54bbd7;
   color: #fff;
+}
+/*pagination*/
+.pagination-controls{
+  display:flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap:8px;
+}
+
+.pagination-controls button{
+  padding:10px 15px;
+  font-size: 1rem;
+  border: 1px solid rgb(43, 73, 226);
+  border-radius: 10px;
+  background-color: #fdbfad;
+  cursor:pointer;
+  transition: all 0.3s ease;
+}
+.pagination-controls button:hover{
+  background-color: rgba(114, 206, 220, 0.853);
+}
+.pagination-controls button.active{
+  background-color: #3498db;
+  color: rgb(69, 69, 69);
+}
+.pagination-controls button.disabled{
+  background-color:#aa9c9c;
+  cursor:not-allowed;
 }
 
 /* Menu List */

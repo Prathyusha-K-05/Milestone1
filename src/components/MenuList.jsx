@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import MenuCard from "./MenuCard";
 
+const ITEMS_PER_PAGE=3;
+
 const menuData = [
   {
     category: "Starters",
@@ -271,44 +273,90 @@ const menuData = [
 ];
 
 const MenuList = () => {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-
+  const [selectedCategory, setSelectedCategory] = useState([]);
+  const[currentPage,setCurrentPage]=useState(1);
+//toggle category selection
   const handleCategoryClick = (category) => {
-    setSelectedCategory(category);
+    setCurrentPage(1);
+    setSelectedCategory((prev)=>
+      prev.includes(category)
+       ? prev.filter((cat)=>cat!==category)
+       :[...prev,category]
+    );
   };
 
   const filteredMenu =
-    selectedCategory === "All"
+    selectedCategory.length === 0
       ? menuData.flatMap((category) => category.items)
       : menuData
-          .find((category) => category.category === selectedCategory)
-          ?.items || [];
+          .filter((category) => selectedCategory.includes(category.category))
+          .flatMap((category)=>category.items);
+
+      //pagination logic
+      const totalPages=Math.ceil(filteredMenu.length/ITEMS_PER_PAGE);
+      const currentItems=filteredMenu.slice(
+        (currentPage-1)*ITEMS_PER_PAGE,
+        currentPage * ITEMS_PER_PAGE
+      ) ;
+      //handle page change
+      const handlePageChange=(page)=>{
+        if(page>=1&& page<=totalPages){
+          setCurrentPage(page);
+        }
+      } ;  
 
   return (
     <div className="menu-container">
       <div className="category-buttons">
-        <button
+       {/* <button
           onClick={() => handleCategoryClick("All")}
           className={selectedCategory === "All" ? "active" : ""}
         >
           All
         </button>
+        */}
         {menuData.map((category) => (
           <button
             key={category.category}
             onClick={() => handleCategoryClick(category.category)}
-            className={selectedCategory === category.category ? "active" : ""}
+            className={selectedCategory.includes(category.category) ? "active" : ""}
           >
             {category.category}
           </button>
         ))}
       </div>
-
+      {/*Menu Items*/}
       <div className="menu-list">
-        {filteredMenu.map((item) => (
+        {currentItems.map((item) => (
           <MenuCard key={item.id} item={item} />
         ))}
       </div>
+      {/*pagination control */}
+      {totalPages > 1 &&(
+        <div className="pagination-controls">
+          <button
+           onClick={() => handlePageChange(currentPage-1)}
+           disabled={currentPage===1}
+           >
+            Previous
+           </button>
+           {Array.from({length: totalPages},(_,index)=>(
+            <button
+            key={index}
+            onClick={()=> handlePageChange(index =1)}
+            className={currentPage===index +1 ? "active":""}
+            >
+              {index+1}
+            </button>
+           ))}
+           <button
+            onClick={()=> handlePageChange(currentPage+1)}
+            disabled={currentPage===totalPages}
+           >
+            Next
+           </button>
+        </div>
+      )}
     </div>
   );
 };
