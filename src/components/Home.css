@@ -13,6 +13,7 @@
   }
   
   .hero-content {
+    background-image: url("Food1.jpg"); 
     background-color: rgba(0, 0, 0, 0.5); /* Slight overlay for readability */
     padding: 2rem;
     border-radius: 8px;

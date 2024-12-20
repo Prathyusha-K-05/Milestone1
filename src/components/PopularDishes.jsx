@@ -1,11 +1,15 @@
 import React from "react";
 import DishCard from "./DishCard";
 import "./PopularDishes.css";
+import burger from "./Burger.jpg"
+import sushi from "./Sushi_platter.jpg"
+import pizza from "./pizza.jpg"
+import "./Food1.jpg"
 
 const dishes = [
-  { id: 1, name: "Margherita Pizza", image: "/pizza.jpg", price: "120" },
-  { id: 2, name: "Cheeseburger", image: "/Burger.jpg", price: "100" },
-  { id: 3, name: "Sushi Platter", image: "/Sushi_platter.jpg", price: "200" },
+  { id: 1, name: "Margherita Pizza", image: pizza, price: "120" },
+  { id: 2, name: "Cheeseburger", image: burger, price: "100" },
+  { id: 3, name: "Sushi Platter", image: sushi, price: "200" },
 ];
 
 const PopularDishes = () => {
