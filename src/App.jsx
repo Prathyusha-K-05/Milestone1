@@ -1,6 +1,5 @@
-// src/App.js
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route,useLocation } from "react-router-dom";
 import MenuList from "./components/MenuList";
 import Cart from "./components/Cart";
 import { CartProvider, useCart } from "./CartContext";
@@ -22,40 +21,47 @@ const Popup = () => {
   return <div className="popup">{popupMessage}</div>;
 };
 
-
 const Homee = () => (
   <div>
     <Home />
     <PopularDishes />
   </div>
 );
+
+const AppContent = () => {
+  const location = useLocation();
+
+  // Only show Navbar and Footer if the current path is not the login page
+  const showNavbarAndFooter = location.pathname !== "/";
+
+  return (
+    <>
+      {showNavbarAndFooter && <Navbar />}
+      <div>
+        <Popup />
+        <Routes>
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/Home" element={<Homee />} />
+          <Route path="/menu" element={<MenuList />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/feedback-form" element={<FeedbackForm />} />
+          <Route path="/signup" element={<SignUpPage />} />
+        </Routes>
+      </div>
+      {showNavbarAndFooter && <Footer />}
+    </>
+  );
+};
+
 const App = () => {
   return (
     <CartProvider>
-      {/* <Navbar/> */}
       <Router>
-        <Navbar/>
-        <div>
-          {/* <nav>
-            <Link to="/">Menu</Link> | <Link to="/cart">Cart</Link>
-          </nav> */}
-          <Popup />
-          <Routes>
-            <Route path="/" element={<LoginPage />} />
-            <Route path="/Home" element={<Homee/>}/>
-            <Route path="/menu" element={<MenuList/>}/>
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/about" element={<AboutUs/>}/>
-            
-            <Route path="/feedback-form" element={<FeedbackForm />} />
-            <Route path="/signup" element={<SignUpPage/>}/>
-          </Routes>
-        </div>
-        <Footer/>
+        <AppContent />
       </Router>
     </CartProvider>
   );
 };
 
 export default App;
-
