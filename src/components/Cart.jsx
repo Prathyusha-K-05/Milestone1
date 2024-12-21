@@ -17,7 +17,7 @@ const Cart = () => {
     setTimeout(() => {
       setShowToast(false);
       navigate("/feedback-form"); // Redirect to FeedbackForm after 10 seconds
-    }, 10000);
+    }, 5000);
   };
 
   return (

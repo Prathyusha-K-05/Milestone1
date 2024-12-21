@@ -7,9 +7,9 @@ import pizza from "./pizza.jpg"
 import "./Food1.jpg"
 
 const dishes = [
-  { id: 1, name: "Margherita Pizza", image: pizza, price: "120" },
-  { id: 2, name: "Cheeseburger", image: burger, price: "100" },
-  { id: 3, name: "Sushi Platter", image: sushi, price: "200" },
+  { id: 1, name: "Margherita Pizza", image: pizza, price: "₹120" },
+  { id: 2, name: "Cheeseburger", image: burger, price: "₹110" },
+  { id: 3, name: "Sushi Platter", image: sushi, price: "₹95" },
 ];
 
 const PopularDishes = () => {

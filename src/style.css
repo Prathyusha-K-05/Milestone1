@@ -55,6 +55,10 @@ label {
     color: #555;
 }
 
+.hero-content h1{
+    color: #ccc;
+}
+
 input[type="text"],
 input[type="password"],
 select {
