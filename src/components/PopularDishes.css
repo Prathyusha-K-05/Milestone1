@@ -25,6 +25,7 @@
     overflow: hidden;
     width: 200px;
     text-align: center;
+    padding-bottom: 1rem;
   }
   
   .dish-card img {

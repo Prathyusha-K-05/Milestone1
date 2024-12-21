@@ -275,7 +275,7 @@ const menuData = [
 const MenuList = () => {
   const [selectedCategory, setSelectedCategory] = useState([]);
   const[currentPage,setCurrentPage]=useState(1);
-//toggle category selection
+  //toggle category selection
   const handleCategoryClick = (category) => {
     setCurrentPage(1);
     setSelectedCategory((prev)=>
@@ -343,7 +343,7 @@ const MenuList = () => {
            {Array.from({length: totalPages},(_,index)=>(
             <button
             key={index}
-            onClick={()=> handlePageChange(index =1)}
+            onClick={()=> handlePageChange(index + 1)}
             className={currentPage===index +1 ? "active":""}
             >
               {index+1}
