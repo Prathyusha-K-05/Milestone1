@@ -24,7 +24,6 @@ h1 {
 /* Container for the menu */
 .menu-container {
   padding:20px;
-  padding-top:60px;
 }
 
 /* Buttons for categories */
@@ -154,9 +153,8 @@ h1 {
 }
 
 .cart-container {
-
   padding: 16px;
-  padding-top: 50px;
+  padding-top: 1px;
   text-align: center;
 }
 
