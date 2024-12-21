@@ -154,7 +154,9 @@ h1 {
 }
 
 .cart-container {
+
   padding: 16px;
+  padding-top: 50px;
   text-align: center;
 }
 
@@ -222,9 +224,9 @@ h1 {
     transform: translateX(-50%) translateY(-10px);
   }
 }
-.cart-container {
+/* .cart-container {
   padding: 20px;
-}
+} */
 
 .cart-items {
   display: flex;
