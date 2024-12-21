@@ -27,17 +27,17 @@ const Navbar = () => {
             <Link to="/Home" className={(location.pathname === "/Home")? "blue" : ""}>Home</Link>
           </li>
           <li>
-            <Link to="/menu" className={location.pathname == "/menu"? "blue" : ""}>Menu</Link>
+            <Link to="/menu" className={location.pathname === "/menu"? "blue" : ""}>Menu</Link>
           </li>
           <li>
-            <Link to="/about" className={location.pathname == "/about"? "blue" : ""}>About Us</Link>
+            <Link to="/about" className={location.pathname === "/about"? "blue" : ""}>About Us</Link>
           </li>
           <li>
-            <Link to="/contact" className={location.pathname == "/contact"? "blue" : ""}>Contact</Link>
+            <Link to="/contact" className={location.pathname === "/contact"? "blue" : ""}>Contact</Link>
           </li>
         </ul>
         <div className="navbar-cart">
-          <Link to="/cart" className={location.pathname == "/cart"? "blue" : ""}>🛒 Cart</Link>
+          <Link to="/cart" className={location.pathname === "/cart"? "blue" : ""}>🛒 Cart</Link>
         </div>
       </nav>
       <div className="clear">

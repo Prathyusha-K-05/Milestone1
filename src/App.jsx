@@ -12,6 +12,8 @@ import PopularDishes from "./components/PopularDishes";
 import LoginPage from "./Loginpage";
 import SignUpPage from "./SignUpPage";
 import AboutUs from "./components/AboutUs";
+import Contact from "./components/contact";
+
 
 const Popup = () => {
   const { popupMessage } = useCart();
@@ -45,6 +47,7 @@ const AppContent = () => {
           <Route path="/menu" element={<MenuList />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<Contact/>}/>
           <Route path="/feedback-form" element={<FeedbackForm />} />
           <Route path="/signup" element={<SignUpPage />} />
         </Routes>
