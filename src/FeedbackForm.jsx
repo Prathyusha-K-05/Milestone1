@@ -4,7 +4,7 @@ import './FeedbackForm.css';
 import { Link } from 'react-router-dom';
 
 const FeedbackForm = () => {
-  const [formData, setFormData] = useState({
+  const [ formData, setFormData ] = useState({
     overallExperience: 0,
     recommend: 0,
     easeOfFindingItems: 0,
