@@ -1,65 +1,72 @@
 /* Navbar Styles */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ff6f61;
-    padding: 1rem 2rem;
-    color: white;
-    position: relative; /* Default position (non-fixed) */
-    width: 100%;
-    top: 0;
-  }
-  
-  .navbar.fixed-navbar {
-    position: fixed; /* Make it fixed */
-    top: 0;
-    left: 0;
-    z-index: 1000;
-  }
-  
-  .navbar-logo a {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-  }
-  
-  .navbar-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-  }
-  
-  .navbar-links li {
-    font-size: 1rem;
-  }
-  
-  .navbar-links a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s;
-  }
-  
-  .navbar-links a:hover {
-    color: #ffe6e1;
-  }
-  
-  .navbar-cart a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .navbar-cart a:hover {
-    color: #ffe6e1;
-  }
-  
-  /* For content adjustment if navbar is fixed */
-  #content {
-    margin-top: 60px; /* Offset content to not hide under the navbar */
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff6f61;
+  padding: 1rem 2rem;
+  color: white;
+  position: relative; /* Default position (non-fixed) */
+  height: 4rem;
+  width: 100%;
+  top: 0;
+}
+
+.navbar.fixed-navbar {
+  position: fixed; /* Make it fixed */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar-logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links li {
+  font-size: 1rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #ffe6e1;
+}
+
+.navbar-cart a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-cart a:hover {
+  color: #ffe6e1;
+}
+
+/* For content adjustment if navbar is fixed */
+#content {
+  margin-top: 60px; /* Offset content to not hide under the navbar */
+}
+.blue {
+  color: blue !important;
+}
+
+.clear {
+  margin-top: 4rem;
+}

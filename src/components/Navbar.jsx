@@ -7,8 +7,6 @@ const Navbar = () => {
   const [isFixed, setIsFixed] = useState(true);
 
   useEffect(() => {
-   
-    
     if (location.pathname === '/') {
       setIsFixed(false); 
       
@@ -16,30 +14,35 @@ const Navbar = () => {
       setIsFixed(true); 
     }
   }, [location.pathname]);
+  
 
   return (
-    <nav className={`navbar ${isFixed ? 'fixed-navbar' : ''}`}>
-      <div className="navbar-logo">
-        <Link to="/">🍴 Foodie</Link>
+    <div>
+      <nav className={`clearfix navbar ${isFixed ? 'fixed-navbar' : ''}`}>
+        <div className="navbar-logo">
+          <Link to="/">🍴 Foodie</Link>
+        </div>
+        <ul className="navbar-links">
+          <li>
+            <Link to="/Home" className={(location.pathname === "/Home")? "blue" : ""}>Home</Link>
+          </li>
+          <li>
+            <Link to="/menu" className={location.pathname == "/menu"? "blue" : ""}>Menu</Link>
+          </li>
+          <li>
+            <Link to="/about" className={location.pathname == "/about"? "blue" : ""}>About Us</Link>
+          </li>
+          <li>
+            <Link to="/contact" className={location.pathname == "/contact"? "blue" : ""}>Contact</Link>
+          </li>
+        </ul>
+        <div className="navbar-cart">
+          <Link to="/cart" className={location.pathname == "/cart"? "blue" : ""}>🛒 Cart</Link>
+        </div>
+      </nav>
+      <div className="clear">
       </div>
-      <ul className="navbar-links">
-        <li>
-          <Link to="/Home">Home</Link>
-        </li>
-        <li>
-          <Link to="/menu">Menu</Link>
-        </li>
-        <li>
-          <Link to="/about">About Us</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li>
-      </ul>
-      <div className="navbar-cart">
-        <Link to="/cart">🛒 Cart</Link>
-      </div>
-    </nav>
+    </div>
   );
 };
 
