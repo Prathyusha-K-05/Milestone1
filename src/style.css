@@ -13,10 +13,10 @@ body, html {
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    background-color: rgb(46, 67, 84);
-    padding: 20px; /* Padding for smaller screens */
+    justify-content: center;
+    align-items: center;
+    background-color: #fdbfad;
+    padding: 20px; 
 }
 
 .log {
@@ -32,7 +32,7 @@ body, html {
     padding: 50px;
     width: 90%; 
     max-width: 400px; 
-    background-color: rgb(35, 47, 62);
+    background-color: #ff6f61;
     color: rgb(251, 247, 247);
     border-radius: 8px; 
 }
@@ -71,7 +71,7 @@ select {
 
 button {
     padding: 10px;
-    background-color: #002339;
+    background-color: #e91c09;
     color: white;
     border: none;
     border-radius: 4px;
@@ -118,7 +118,7 @@ button:hover {
 }
 
 a {
-    color: #4CAF50;
+    color: #00bb06;
     text-decoration: none;
 }
 

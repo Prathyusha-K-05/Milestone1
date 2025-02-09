@@ -26,7 +26,7 @@ function SignUpPage() {
                         <label htmlFor="password" className="title">Password</label>
                         <input type="password" className="pswrd all" placeholder="Enter your password" />
 
-                        <button type="submit">Sign up</button>
+                        <button type="submit" >Sign up</button>
                     </form>
                 </div>
 
